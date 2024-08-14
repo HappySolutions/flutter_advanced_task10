@@ -26,37 +26,25 @@ TextStyle kSectionTitleText = GoogleFonts.montserrat(
   fontSize: 18.0.sp,
 );
 
-ElevatedButtonThemeData elevatedButtonThemeData = ElevatedButtonThemeData(
-  style: ButtonStyle(
-    backgroundColor: WidgetStateColor.resolveWith((states) => kGrey),
-    foregroundColor: WidgetStateColor.resolveWith(
-      (Set<WidgetState> states) {
-        if (states.contains(WidgetState.hovered)) return Colors.black;
-        if (states.contains(WidgetState.focused) ||
-            states.contains(WidgetState.pressed)) return Colors.white;
-        return kGrey; // Defer to the widget's default.
-      },
-    ),
-  ),
-);
+
 List<Project> projectList = [
   Project(
-      name: "Shades",
+      name: "Project 1",
       description:
-          "Winner IEEE Mandi 'Go Online' Challenge at Electrothon, NIT Hamirpur.",
-      link: "https://github.com/adityathakurxd/shades"),
+          "Description for project 1.",
+      link: ""),
   Project(
-      name: "Fiasco",
+      name: "Project 2",
       description:
-          "Fiasco is one stop solution to help you manage Family expenses in one place!",
-      link: "https://github.com/adityathakurxd/fiasco"),
+          "Description for project 2.",
+      link: ""),
   Project(
-      name: "Fiasco",
+      name: "Project 3",
       description:
-          "Fiasco is one stop solution to help you manage Family expenses in one place!",
-      link: "https://github.com/adityathakurxd/fiasco"),
+          "Description for project 3.",
+      link: ""),
   Project(
-      name: "Flutter Portfolio",
-      description: "A template for Portfolio",
-      link: "https://github.com/adityathakurxd/flutter-portfolio")
+      name: "Project 4",
+      description: "Description for project 4",
+      link: "")
 ];
