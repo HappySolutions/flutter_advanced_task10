@@ -22,7 +22,9 @@ class AppDrawerWidget extends StatelessWidget {
       children: [
         SizedBox(
           height: 150.h,
-          child: Image.asset('assets/12.jpg'),
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(100),
+              child: Image.asset('assets/12.jpg')),
         ),
         Expanded(
             child: SingleChildScrollView(
@@ -72,7 +74,7 @@ class AppDrawerWidget extends StatelessWidget {
           ),
         )),
         SizedBox(
-          height: 80.h,
+          height: 90.h,
           child: Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

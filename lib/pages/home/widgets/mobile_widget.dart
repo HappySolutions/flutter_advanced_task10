@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_task10/constants/constants.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/about_card_widget.dart';
 import 'package:flutter_advanced_task10/widgets/app_bar_widget.dart';
 import 'package:flutter_advanced_task10/widgets/app_drawer_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -72,7 +73,7 @@ class _MobileWidgetState extends State<MobileWidget> {
                 ),
               )),
     ),
-    4: const Text('About')
+    4: const Center(child: AboutCard())
   };
 
   @override
