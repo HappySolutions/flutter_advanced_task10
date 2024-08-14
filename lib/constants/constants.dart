@@ -10,7 +10,7 @@ Color kBlack = Colors.black;
 
 TextStyle kTitleText = GoogleFonts.poppins(
   color: Colors.black,
-  fontSize: 20.0.sp,
+  fontSize: 15.0.sp,
   fontWeight: FontWeight.bold,
 );
 
@@ -20,31 +20,24 @@ TextStyle kSubTitleText = GoogleFonts.montserrat(
   fontSize: 12.0.sp,
 );
 
+TextStyle kdescriptioText = GoogleFonts.montserrat(
+  color: kBlack,
+  fontWeight: FontWeight.bold,
+  fontSize: 10.0.sp,
+);
+
 TextStyle kSectionTitleText = GoogleFonts.montserrat(
   color: kPrimaryColor,
   fontWeight: FontWeight.bold,
-  fontSize: 18.0.sp,
+  fontSize: 12.0.sp,
 );
-
 
 List<Project> projectList = [
   Project(
-      name: "Project 1",
-      description:
-          "Description for project 1.",
-      link: ""),
+      name: "Project 1", description: "Description for project 1.", link: ""),
   Project(
-      name: "Project 2",
-      description:
-          "Description for project 2.",
-      link: ""),
+      name: "Project 2", description: "Description for project 2.", link: ""),
   Project(
-      name: "Project 3",
-      description:
-          "Description for project 3.",
-      link: ""),
-  Project(
-      name: "Project 4",
-      description: "Description for project 4",
-      link: "")
+      name: "Project 3", description: "Description for project 3.", link: ""),
+  Project(name: "Project 4", description: "Description for project 4", link: "")
 ];

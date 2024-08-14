@@ -4,14 +4,14 @@ import 'package:flutter_advanced_task10/widgets/project_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePageEX extends StatefulWidget {
+  const HomePageEX({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageEX> createState() => _HomePageEXState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageEXState extends State<HomePageEX> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
+              width: ScreenUtil().screenWidth,
               height: 200.h,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -42,6 +42,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10.sp,
             ),
             Center(
               child: Text(
@@ -74,7 +77,6 @@ class _HomePageState extends State<HomePage> {
                   width: 10.w,
                 ),
                 ElevatedButton(
-                    // style: elevatedButtonThemeData,
                     onPressed: () async {
                       final Uri emailLaunchUri = Uri(
                         scheme: 'mailto',
@@ -88,8 +90,8 @@ class _HomePageState extends State<HomePage> {
                     ))
               ],
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 20.h,
             ),
             Center(
               child: SizedBox(
@@ -110,13 +112,14 @@ class _HomePageState extends State<HomePage> {
                                 SizedBox(
                                   height: 10.h,
                                 ),
-                                const Text('aboutWorkExperience'),
+                                Text('aboutWorkExperience',
+                                    style: kdescriptioText),
                                 const Divider(),
                                 Text("About Me", style: kSectionTitleText),
                                 SizedBox(
                                   height: 10.h,
                                 ),
-                                const Text('aboutMeSummary'),
+                                Text('aboutMeSummary', style: kdescriptioText),
                               ],
                             ),
                           ),
@@ -149,9 +152,8 @@ class _HomePageState extends State<HomePage> {
                                               SizedBox(
                                                 width: 5.w,
                                               ),
-                                              const Text(
-                                                'location',
-                                              )
+                                              Text('location',
+                                                  style: kdescriptioText)
                                             ],
                                           ),
                                           const SizedBox(
@@ -166,7 +168,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           Row(
                                             children: [
-                                              const Text('website'),
+                                              Text('website',
+                                                  style: kdescriptioText),
                                               SizedBox(
                                                 width: 5.w,
                                               ),
@@ -188,7 +191,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           Row(
                                             children: [
-                                              const Text('portfolio'),
+                                              Text('portfolio',
+                                                  style: kdescriptioText),
                                               SizedBox(
                                                 width: 5.w,
                                               ),
@@ -210,7 +214,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           Row(
                                             children: [
-                                              const Text('email'),
+                                              Text('email',
+                                                  style: kdescriptioText),
                                               SizedBox(
                                                 width: 5.w,
                                               ),
@@ -243,120 +248,115 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(
                                 height: 10.h,
                               ),
-                              const Text('aboutWorkExperience'),
+                              Text('aboutWorkExperience',
+                                  style: kdescriptioText),
                               const Divider(),
                               Text("About Me", style: kSectionTitleText),
                               SizedBox(
                                 height: 10.h,
                               ),
-                              const Text('aboutMeSummary'),
+                              Text('aboutMeSummary', style: kdescriptioText),
                             ],
                           ),
-                          Column(
-                            children: [
-                              Card(
-                                color: Colors.white,
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 20, horizontal: 40),
-                                  child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                          Card(
+                            color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 20, horizontal: 40),
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Location",
+                                      style: kSubTitleText,
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Row(
                                       children: [
-                                        Text(
-                                          "Location",
-                                          style: kSubTitleText,
+                                        const Icon(
+                                          Icons.circle,
+                                          size: 16,
                                         ),
                                         SizedBox(
-                                          height: 10.h,
+                                          width: 5.w,
                                         ),
-                                        Row(
-                                          children: [
-                                            const Icon(
-                                              Icons.circle,
-                                              size: 16,
-                                            ),
-                                            SizedBox(
-                                              width: 5.w,
-                                            ),
-                                            const Text(
-                                              'location',
-                                            )
-                                          ],
-                                        ),
+                                        Text('location', style: kdescriptioText)
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Text(
+                                      "Website",
+                                      style: kSubTitleText,
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text('website', style: kdescriptioText),
                                         SizedBox(
-                                          height: 10.h,
+                                          width: 5.w,
                                         ),
-                                        Text(
-                                          "Website",
-                                          style: kSubTitleText,
-                                        ),
+                                        const Icon(
+                                          Icons.launch,
+                                          size: 16,
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Text(
+                                      "Portfolio",
+                                      style: kSubTitleText,
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text('portfolio',
+                                            style: kdescriptioText),
                                         SizedBox(
-                                          height: 10.h,
+                                          width: 5.w,
                                         ),
-                                        Row(
-                                          children: [
-                                            const Text('website'),
-                                            SizedBox(
-                                              width: 5.w,
-                                            ),
-                                            const Icon(
-                                              Icons.launch,
-                                              size: 16,
-                                            )
-                                          ],
-                                        ),
+                                        const Icon(
+                                          Icons.launch,
+                                          size: 16,
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Text(
+                                      "Email",
+                                      style: kSubTitleText,
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text('email', style: kdescriptioText),
                                         SizedBox(
-                                          height: 10.h,
+                                          width: 5.w,
                                         ),
-                                        Text(
-                                          "Portfolio",
-                                          style: kSubTitleText,
-                                        ),
-                                        SizedBox(
-                                          height: 10.h,
-                                        ),
-                                        Row(
-                                          children: [
-                                            const Text('portfolio'),
-                                            SizedBox(
-                                              width: 5.w,
-                                            ),
-                                            const Icon(
-                                              Icons.launch,
-                                              size: 16,
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10.h,
-                                        ),
-                                        Text(
-                                          "Email",
-                                          style: kSubTitleText,
-                                        ),
-                                        SizedBox(
-                                          height: 10.h,
-                                        ),
-                                        Row(
-                                          children: [
-                                            const Text('email'),
-                                            SizedBox(
-                                              width: 5.w,
-                                            ),
-                                            const Icon(
-                                              Icons.launch,
-                                              size: 16,
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10.h,
-                                        ),
-                                      ]),
-                                ),
-                              )
-                            ],
+                                        const Icon(
+                                          Icons.launch,
+                                          size: 16,
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10.h,
+                                    ),
+                                  ]),
+                            ),
                           ),
                         ],
                       ),
