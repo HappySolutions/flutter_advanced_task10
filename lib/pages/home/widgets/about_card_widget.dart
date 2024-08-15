@@ -28,21 +28,28 @@ class AboutCard extends StatelessWidget {
               SizedBox(
                 width: 5.w,
               ),
-              Text('location', style: kdescriptioText)
+              Text('Giza, Egypt', style: kdescriptioText)
             ],
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Text(
             "Website",
             style: kSubTitleText,
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Row(
             children: [
+              const Icon(
+                Icons.circle,
+                size: 16,
+              ),
+              SizedBox(
+                width: 5.w,
+              ),
               Text('website', style: kdescriptioText),
               SizedBox(
                 width: 5.w,
@@ -65,6 +72,13 @@ class AboutCard extends StatelessWidget {
           ),
           Row(
             children: [
+              const Icon(
+                Icons.circle,
+                size: 16,
+              ),
+              SizedBox(
+                width: 5.w,
+              ),
               Text('portfolio', style: kdescriptioText),
               SizedBox(
                 width: 5.w,
@@ -87,6 +101,13 @@ class AboutCard extends StatelessWidget {
           ),
           Row(
             children: [
+              const Icon(
+                Icons.circle,
+                size: 16,
+              ),
+              SizedBox(
+                width: 5.w,
+              ),
               Text('email', style: kdescriptioText),
               SizedBox(
                 width: 5.w,

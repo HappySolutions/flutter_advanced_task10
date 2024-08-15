@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_task10/constants/constants.dart';
 import 'package:flutter_advanced_task10/pages/home/widgets/about_card_widget.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/contact_card_widget.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/info_widget.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/skills_card_widget.dart';
 import 'package:flutter_advanced_task10/widgets/app_bar_widget.dart';
 import 'package:flutter_advanced_task10/widgets/app_drawer_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,8 +20,8 @@ class _MobileWidgetState extends State<MobileWidget> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   int selectedIndex = 1;
   Map<int, Widget> indexWidgetMap = {
-    1: const Text('Home'),
-    2: const Text('Experience'),
+    1: const InfoCard(),
+    2: const SkillsCard(),
     3: Wrap(
       spacing: 10,
       runSpacing: 10,
@@ -73,7 +76,11 @@ class _MobileWidgetState extends State<MobileWidget> {
                 ),
               )),
     ),
-    4: const Center(child: AboutCard())
+    4: const SingleChildScrollView(
+        child: Column(children: [
+      AboutCard(),
+      ContactCard(),
+    ]))
   };
 
   @override

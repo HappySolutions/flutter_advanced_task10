@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_task10/constants/constants.dart';
 import 'package:flutter_advanced_task10/pages/home/widgets/about_card_widget.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/contact_card_widget.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/info_widget.dart';
+import 'package:flutter_advanced_task10/pages/home/widgets/skills_card_widget.dart';
 import 'package:flutter_advanced_task10/widgets/app_bar_widget.dart';
 import 'package:flutter_advanced_task10/widgets/app_drawer_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,16 +19,16 @@ class DesktopWidget extends StatefulWidget {
 class _DesktopWidgetState extends State<DesktopWidget> {
   int selectedIndex = 1;
   Map<int, Widget> indexWidgetMap = {
-    1: const Text('Home'),
-    2: const Text('Experience'),
+    1: const InfoCard(),
+    2: const SkillsCard(),
     3: Wrap(
       spacing: 10,
       runSpacing: 10,
       children: List.generate(
           5,
           (index) => SizedBox(
-                height: 150.h,
-                width: 150.w,
+                height: 160.h,
+                width: 160.w,
                 child: PhysicalModel(
                   borderRadius: BorderRadius.circular(15),
                   elevation: 5,
@@ -43,8 +46,8 @@ class _DesktopWidgetState extends State<DesktopWidget> {
                               color: kGrey,
                               size: 18,
                             ),
-                            const SizedBox(
-                              width: 10,
+                            SizedBox(
+                              width: 10.w,
                             ),
                             Text(
                               'projectData.name',
@@ -72,7 +75,11 @@ class _DesktopWidgetState extends State<DesktopWidget> {
                 ),
               )),
     ),
-    4: const Center(child: AboutCard())
+    4: const SingleChildScrollView(
+        child: Column(children: [
+      AboutCard(),
+      ContactCard(),
+    ]))
   };
 
   @override
